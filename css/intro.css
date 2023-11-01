@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
     --primary-color: #f9532d;
     --primary-dark: #1F252E;
@@ -264,3 +264,14 @@ li a:hover {
         margin-top: 2rem;
     }
 }
+
+  
+  .tagcloud {
+      font-family: 'Poppins', sans-serif;  
+      font-size: 20px;
+      margin: auto;
+      width: 50%;
+    }
+    .tagcloud--item:hover {
+      color: #36454F;
+    }

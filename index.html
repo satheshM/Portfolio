@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/intro.css">
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
     <title>Portfolio</title>
 </head>
 
@@ -26,8 +27,8 @@
             </label>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -56,10 +57,15 @@
             </div>
             <div class="img-sec">
                 <div class="images">
-                    <img src="img/sathesh.jpg" alt="" class="img-w">
+                    <img src="img/sathesh.gif" alt="" class="img-w">
                 </div>
             </div>
         </div>
+    </section>
+    <section id="skills">
+        <h5>SKILLS</h5>
+        <span class="content"></span>
+
     </section>
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -78,6 +84,40 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
+    </script>
+    <script>
+         const myTags = [
+    'JavaScript', 'CSS', 'HTML',
+    'C', 'C++', 'React',
+    'Python', 'Java', 'git',
+    'django', 'Node.js', 'OpenCV',
+    'GCP', 'MySQL', 'jQuery'
+];
+
+var tagCloud = TagCloud('.content', myTags,{
+
+  // radius in px
+  radius: 250,
+
+  // animation speed
+  // slow, normal, fast
+  maxSpeed: 'fast',
+  initSpeed: 'fast',
+
+  // 0 = top
+  // 90 = left
+  // 135 = right-bottom
+  direction: 135,
+  
+  // interact with cursor move on mouse out
+  keep: true
+  
+});
+
+//To change the color of text randomly
+var colors = ['#34A853', '#FBBC05', '#4285F4', '#7FBC00', 'FFBA01', '01A6F0'];
+var random_color = colors[Math.floor(Math.random() * colors.length)];
+document.querySelector('.content').style.color = random_color;
     </script>
     
 </body>
